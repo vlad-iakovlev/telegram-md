@@ -27,3 +27,28 @@ jobs:
         run: npm ci
       - name: Run ${{ matrix.check }}
         run: npm run ${{ matrix.check }}
+
+  publish:
+    needs:
+      - compile
+      - test
+    if: github.repository == 'vlad-yakovlev/telegram-md' && github.ref == 'refs/heads/main'
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+        with:
+          fetch-depth: 0
+      - name: Setup Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: 18
+      - name: Install dependencies
+        run: npm ci
+      - name: Build
+        run: npm run build
+      - name: Release
+        run: npx semantic-release@19
+        env:
+          GH_TOKEN: ${{secrets.GH_TOKEN}}
+          NPM_TOKEN: ${{secrets.NPM_TOKEN}}

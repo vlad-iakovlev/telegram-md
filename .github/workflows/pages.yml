@@ -1,0 +1,25 @@
+name: GH pages
+
+on:
+  push:
+    branches:
+      -main
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+      - name: Setup Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: 16
+      - name: Install dependencies
+        run: npm ci
+      - name: Build docs
+        run: npm run docs:build
+      - name: Deploy pages
+        uses: JamesIves/github-pages-deploy-action@v4
+        with:
+          folder: docs

@@ -7,6 +7,7 @@
   "scripts": {
     "prepare": "husky install",
     "build": "tsc",
+    "build:docs": "typedoc src/index.ts",
     "compile": "tsc --noEmit",
     "lint": "eslint --ext .ts .",
     "test": "jest --coverage",

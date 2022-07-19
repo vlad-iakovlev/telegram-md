@@ -29,9 +29,7 @@ jobs:
         run: npm run ${{ matrix.check }}
 
   publish:
-    needs:
-      - compile
-      - test
+    needs: checks
     if: github.repository == 'vlad-yakovlev/telegram-md' && github.ref == 'refs/heads/main'
     runs-on: ubuntu-latest
     steps:

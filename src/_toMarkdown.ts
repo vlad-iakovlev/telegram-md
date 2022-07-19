@@ -14,8 +14,6 @@ class Markdown {
   }
 }
 
-export type MayBeMarkdown = string | Markdown;
-
 export const toMarkdown = (value?: unknown, escaped?: boolean) => {
   if (value instanceof Markdown) {
     return value;

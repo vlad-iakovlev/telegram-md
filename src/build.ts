@@ -1,3 +1,11 @@
-import { toMarkdown, MayBeMarkdown } from './_toMarkdown';
+import { toMarkdown } from './_toMarkdown';
 
-export const build = (text: MayBeMarkdown) => toMarkdown(text).value;
+/**
+ * Build text for telegram api from string or md.* return values
+ * @param text input
+ * @signature
+ *    md.build(text)
+ * @example
+ *    md.build('foo_bar') // => 'foo\\_bar'
+ */
+export const build = (text: string | { value: string }) => toMarkdown(text).value;

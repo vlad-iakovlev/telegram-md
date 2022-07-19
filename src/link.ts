@@ -1,6 +1,15 @@
-import { toMarkdown, MayBeMarkdown } from './_toMarkdown';
+import { toMarkdown } from './_toMarkdown';
 
-export const link = (name: MayBeMarkdown, url: MayBeMarkdown) => {
+/**
+ * Creates link
+ * @param name link name
+ * @param url link url
+ * @signature
+ *    md.link(name, url)
+ * @example
+ *    md.link('google', 'https://google.com) // => '[google](https://google\\.com)'
+ */
+export const link = (name: unknown, url: unknown) => {
   if (!name && !url) {
     return toMarkdown();
   }

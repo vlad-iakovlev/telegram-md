@@ -10,8 +10,13 @@ import { spoiler as spoilerFunc } from './spoiler';
 import { strikethrough as strikethroughFunc } from './strikethrough';
 import { underline as underlineFunc } from './underline';
 
-export { MayBeMarkdown as MayBeEscaped } from './_toMarkdown';
-
+/**
+ * Creates template string
+ * @signature
+ *    md\`...\`
+ * @example
+ *    md`Hello, ${md.bold('World')}!` // => 'Hello, *World*\\!'
+ */
 export function md(strings: TemplateStringsArray, ...values: unknown[]) {
   let result = `${toMarkdown(strings[0])}`;
 
@@ -34,4 +39,6 @@ export namespace md {
   export const spoiler = spoilerFunc;
   export const strikethrough = strikethroughFunc;
   export const underline = underlineFunc;
+
+  export type MD = { value: string };
 }

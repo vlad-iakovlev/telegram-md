@@ -1,6 +1,14 @@
-import { toMarkdown, MayBeMarkdown } from './_toMarkdown';
+import { toMarkdown } from './_toMarkdown';
 
-export const inlineCode = (code: MayBeMarkdown) => {
+/**
+ * Creates inline code
+ * @param code input
+ * @signature
+ *    md.inlineCode(code)
+ * @example
+ *    md.inlineCode('foo_bar') // => '`foo\\_bar`'
+ */
+export const inlineCode = (code: unknown) => {
   if (!code) {
     return toMarkdown();
   }

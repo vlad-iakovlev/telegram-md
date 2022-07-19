@@ -1,6 +1,15 @@
-import { toMarkdown, MayBeMarkdown } from './_toMarkdown';
+import { toMarkdown } from './_toMarkdown';
 
-export const codeBlock = (code: MayBeMarkdown, language = '') => {
+/**
+ * Creates code block
+ * @param code input
+ * @param language optional language
+ * @signature
+ *    md.codeBlock(code, language)
+ * @example
+ *    md.codeBlock('foo_bar', 'python') // => '```python\nfoo\\_bar\n```'
+ */
+export const codeBlock = (code: unknown, language = '') => {
   if (!code) {
     return toMarkdown();
   }

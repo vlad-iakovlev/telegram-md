@@ -1,6 +1,14 @@
-import { toMarkdown, MayBeMarkdown } from './_toMarkdown';
+import { toMarkdown } from './_toMarkdown';
 
-export const italic = (text: MayBeMarkdown) => {
+/**
+ * Make text italic
+ * @param text input
+ * @signature
+ *    md.italic(text)
+ * @example
+ *    md.italic('foo_bar') // => '_foo\\_bar_'
+ */
+export const italic = (text: unknown) => {
   if (!text) {
     return toMarkdown();
   }

@@ -1,6 +1,14 @@
-import { toMarkdown, MayBeMarkdown } from './_toMarkdown';
+import { toMarkdown } from './_toMarkdown';
 
-export const spoiler = (text: MayBeMarkdown) => {
+/**
+ * Creates spoiler
+ * @param text input
+ * @signature
+ *    md.spoiler(text)
+ * @example
+ *    md.spoiler('foo_bar') // => '||foo\\_bar||'
+ */
+export const spoiler = (text: unknown) => {
   if (!text) {
     return toMarkdown();
   }

@@ -4,7 +4,7 @@ import { _toMarkdown } from './_toMarkdown';
 /**
  * Make text bold
  * @example
- * md.bold('bold *text') // => '*bold \*text*'
+ * md.bold('bold *text') // => Markdown with value '*bold \*text*'
  */
 export const bold = (text: unknown): Markdown => {
   if (!text) {

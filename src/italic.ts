@@ -4,7 +4,7 @@ import { _toMarkdown } from './_toMarkdown';
 /**
  * Make text italic
  * @example
- * md.italic('italic *text') // => '_italic \*text_'
+ * md.italic('italic *text') // => Markdown with value '_italic \*text_'
  */
 export const italic = (text: unknown): Markdown => {
   if (!text) {

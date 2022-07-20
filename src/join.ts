@@ -4,7 +4,7 @@ import { _toMarkdown } from './_toMarkdown';
 /**
  * Join items
  * @example
- *    md.join(['foo_bar', 'bar_baz'], '\n') // => 'foo\\_bar\nbar\\_baz'
+ *    md.join(['foo_bar', 'bar_baz'], '\n') // => Markdown with value 'foo\\_bar\nbar\\_baz'
  */
 export const join = (texts: unknown[], separator: unknown = ''): Markdown => {
   const value = texts

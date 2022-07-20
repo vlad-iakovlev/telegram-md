@@ -5,10 +5,10 @@ import { _toMarkdown } from './_toMarkdown';
  * Create code block
  * @example
  * md.code('pre-formatted fixed-width code block')
- * // => '```\npre\\-formatted fixed\\-width code block\n```'
+ * // => Markdown with value '```\npre\\-formatted fixed\\-width code block\n```'
  *
  * md.code('pre-formatted fixed-width code block written in the Python', 'python')
- * // => '```python\npre\\-formatted fixed\\-width code block written in the Python\n```'
+ * // => Markdown with value '```python\npre\\-formatted fixed\\-width code block written in the Python\n```'
  */
 export const codeBlock = (code: unknown, language = ''): Markdown => {
   if (!code) {

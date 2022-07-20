@@ -4,7 +4,7 @@ import { _toMarkdown } from './_toMarkdown';
 /**
  * Create inline code
  * @example
- * md.inlineCode('inline fixed-width code') // => '`inline fixed\\-width code`'
+ * md.inlineCode('inline fixed-width code') // => Markdown with value '`inline fixed\\-width code`'
  */
 export const inlineCode = (code: unknown): Markdown => {
   if (!code) {

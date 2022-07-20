@@ -4,7 +4,7 @@ import { _toMarkdown } from './_toMarkdown';
 /**
  * Underline text
  * @example
- * md.underline('underline') // => '__underline__'
+ * md.underline('underline') // => Markdown with value '__underline__'
  */
 export const underline = (text: unknown): Markdown => {
   if (!text) {

@@ -16,7 +16,7 @@ export { Markdown };
 /**
  * Creates Markdown from template
  * @example
- * md`Hello, ${md.bold('World')}!` // => 'Hello, *World*\\!'
+ * md`Hello, ${md.bold('World')}!` // => Markdown with value 'Hello, *World*\\!'
  */
 export function md(strings: TemplateStringsArray, ...values: unknown[]): Markdown {
   let result = `${_toMarkdown(strings[0])}`;

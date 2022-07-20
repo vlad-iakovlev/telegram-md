@@ -4,7 +4,7 @@ import { _toMarkdown } from './_toMarkdown';
 /**
  * Creates spoiler
  * @example
- * md.spoiler('spoiler') // => '||spoiler||'
+ * md.spoiler('spoiler') // => Markdown with value '||spoiler||'
  */
 export const spoiler = (text: unknown): Markdown => {
   if (!text) {

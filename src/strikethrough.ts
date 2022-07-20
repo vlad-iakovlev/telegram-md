@@ -4,7 +4,7 @@ import { _toMarkdown } from './_toMarkdown';
 /**
  * Strikethrough text
  * @example
- * md.strikethrough('strikethrough') // => '~strikethrough~'
+ * md.strikethrough('strikethrough') // => Markdown with value '~strikethrough~'
  */
 export const strikethrough = (text: unknown): Markdown => {
   if (!text) {

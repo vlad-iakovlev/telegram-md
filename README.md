@@ -20,7 +20,7 @@ import { md } from 'telegram-md'
 
 const message = md`Hello, ${md.bold('World')}!`
 
-ctx.reply(md.build(message))
+api.sendMessage(chatId, md.build(message))
 ```
 
 ## Classes

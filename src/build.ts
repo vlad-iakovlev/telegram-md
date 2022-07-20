@@ -1,11 +1,9 @@
-import { toMarkdown } from './_toMarkdown';
+import { _toMarkdown } from './_toMarkdown';
 
 /**
- * Build text for telegram api from string or md.* return values
- * @param text input
- * @signature
- *    md.build(text)
+ * Build message text for telegram API
  * @example
- *    md.build('foo_bar') // => 'foo\\_bar'
+ * md.build(md`Hello, ${md.bold('World')}!`) // => 'Hello, *World*\\!'
+ * md.build('Hello, World!') // => 'Hello, World\\!'
  */
-export const build = (text: string | { value: string }) => toMarkdown(text).value;
+export const build = (text: unknown): string => _toMarkdown(text).value;

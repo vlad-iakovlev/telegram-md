@@ -1,23 +1,9 @@
-class Markdown {
-  value: string;
+import { Markdown } from './markdown';
 
-  constructor(value: unknown = '', escaped = false) {
-    this.value = escaped ? String(value) : Markdown.escape(String(value));
+export const _toMarkdown = (text?: unknown, escaped?: boolean) => {
+  if (text instanceof Markdown) {
+    return text;
   }
 
-  static escape(text: string) {
-    return text.replace(/([_*[\]()~`>#+\-=|{}.!])/g, '\\$1');
-  }
-
-  toString() {
-    return this.value;
-  }
-}
-
-export const toMarkdown = (value?: unknown, escaped?: boolean) => {
-  if (value instanceof Markdown) {
-    return value;
-  }
-
-  return new Markdown(value, escaped);
+  return new Markdown(text, escaped);
 };

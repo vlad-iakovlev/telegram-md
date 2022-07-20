@@ -1,18 +1,19 @@
-import { toMarkdown } from './_toMarkdown';
+import { Markdown } from './markdown';
+import { _toMarkdown } from './_toMarkdown';
 
 /**
- * Creates code block
- * @param code input
- * @param language optional language
- * @signature
- *    md.codeBlock(code, language)
+ * Create code block
  * @example
- *    md.codeBlock('foo_bar', 'python') // => '```python\nfoo\\_bar\n```'
+ * md.code('pre-formatted fixed-width code block')
+ * // => '```\npre\\-formatted fixed\\-width code block\n```'
+ *
+ * md.code('pre-formatted fixed-width code block written in the Python', 'python')
+ * // => '```python\npre\\-formatted fixed\\-width code block written in the Python\n```'
  */
-export const codeBlock = (code: unknown, language = '') => {
+export const codeBlock = (code: unknown, language = ''): Markdown => {
   if (!code) {
-    return toMarkdown();
+    return _toMarkdown();
   }
 
-  return toMarkdown(`\`\`\`${toMarkdown(language)}\n${toMarkdown(code)}\n\`\`\``, true);
+  return _toMarkdown(`\`\`\`${_toMarkdown(language)}\n${_toMarkdown(code)}\n\`\`\``, true);
 };

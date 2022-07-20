@@ -1,17 +1,15 @@
-import { toMarkdown } from './_toMarkdown';
+import { Markdown } from './markdown';
+import { _toMarkdown } from './_toMarkdown';
 
 /**
  * Make text italic
- * @param text input
- * @signature
- *    md.italic(text)
  * @example
- *    md.italic('foo_bar') // => '_foo\\_bar_'
+ * md.italic('italic *text') // => '_italic \*text_'
  */
-export const italic = (text: unknown) => {
+export const italic = (text: unknown): Markdown => {
   if (!text) {
-    return toMarkdown();
+    return _toMarkdown();
   }
 
-  return toMarkdown(`_${toMarkdown(text)}_`, true);
+  return _toMarkdown(`_${_toMarkdown(text)}_`, true);
 };

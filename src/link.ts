@@ -1,26 +1,24 @@
-import { toMarkdown } from './_toMarkdown';
+import { Markdown } from './markdown';
+import { _toMarkdown } from './_toMarkdown';
 
 /**
  * Creates link
- * @param name link name
- * @param url link url
- * @signature
- *    md.link(name, url)
  * @example
- *    md.link('google', 'https://google.com) // => '[google](https://google\\.com)'
+ * md.link('inline URL', 'http://www.example.com/') // => '[inline URL](http://www\\.example\\.com/)'
+ * md.link('inline mention of a user', 'tg://user?id=123456789') // => '[inline mention of a user](tg://user?id\\=123456789)'
  */
-export const link = (name: unknown, url: unknown) => {
+export const link = (name: unknown, url: unknown): Markdown => {
   if (!name && !url) {
-    return toMarkdown();
+    return _toMarkdown();
   }
 
   if (!name) {
-    return toMarkdown(url);
+    return _toMarkdown(url);
   }
 
   if (!url) {
-    return toMarkdown(name);
+    return _toMarkdown(name);
   }
 
-  return toMarkdown(`[${toMarkdown(name)}](${toMarkdown(url)})`, true);
+  return _toMarkdown(`[${_toMarkdown(name)}](${_toMarkdown(url)})`, true);
 };

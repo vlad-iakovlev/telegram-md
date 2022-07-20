@@ -27,7 +27,7 @@ api.sendMessage(chatId, md.build(message))
 
 ### Markdown
 
-Stores the result of executing md methods. Uses to differentiate between normal strings and escaped strings.
+Stores the result of executing md methods. Used to differentiate between normal strings and escaped strings.
 
 ## Methods
 

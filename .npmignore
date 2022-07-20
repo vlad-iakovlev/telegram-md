@@ -4,3 +4,4 @@ tsconfig.json
 .github
 .husky
 *.test.js
+*.test.d.ts

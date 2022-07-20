@@ -1,17 +1,15 @@
-import { toMarkdown } from './_toMarkdown';
+import { Markdown } from './markdown';
+import { _toMarkdown } from './_toMarkdown';
 
 /**
  * Underline text
- * @param text input
- * @signature
- *    md.underline(text)
  * @example
- *    md.underline('foo_bar') // => '__foo\\_bar__'
+ * md.underline('underline') // => Markdown with value '__underline__'
  */
-export const underline = (text: unknown) => {
+export const underline = (text: unknown): Markdown => {
   if (!text) {
-    return toMarkdown();
+    return _toMarkdown();
   }
 
-  return toMarkdown(`__${toMarkdown(text)}__`, true);
+  return _toMarkdown(`__${_toMarkdown(text)}__`, true);
 };

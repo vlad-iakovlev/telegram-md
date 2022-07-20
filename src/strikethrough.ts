@@ -1,17 +1,15 @@
-import { toMarkdown } from './_toMarkdown';
+import { Markdown } from './markdown';
+import { _toMarkdown } from './_toMarkdown';
 
 /**
  * Strikethrough text
- * @param text input
- * @signature
- *    md.strikethrough(text)
  * @example
- *    md.strikethrough('foo_bar') // => '~foo\\_bar~'
+ * md.strikethrough('strikethrough') // => Markdown with value '~strikethrough~'
  */
-export const strikethrough = (text: unknown) => {
+export const strikethrough = (text: unknown): Markdown => {
   if (!text) {
-    return toMarkdown();
+    return _toMarkdown();
   }
 
-  return toMarkdown(`~${toMarkdown(text)}~`, true);
+  return _toMarkdown(`~${_toMarkdown(text)}~`, true);
 };

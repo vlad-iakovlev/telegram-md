@@ -1,17 +1,15 @@
-import { toMarkdown } from './_toMarkdown';
+import { Markdown } from './markdown';
+import { _toMarkdown } from './_toMarkdown';
 
 /**
  * Make text bold
- * @param text input
- * @signature
- *    md.bold(text)
  * @example
- *    md.bold('foo_bar') // => '*foo\\_bar*'
+ * md.bold('bold *text') // => Markdown with value '*bold \*text*'
  */
-export const bold = (text: unknown) => {
+export const bold = (text: unknown): Markdown => {
   if (!text) {
-    return toMarkdown();
+    return _toMarkdown();
   }
 
-  return toMarkdown(`*${toMarkdown(text)}*`, true);
+  return _toMarkdown(`*${_toMarkdown(text)}*`, true);
 };

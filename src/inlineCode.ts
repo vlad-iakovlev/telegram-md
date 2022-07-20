@@ -1,17 +1,15 @@
-import { toMarkdown } from './_toMarkdown';
+import { Markdown } from './markdown';
+import { _toMarkdown } from './_toMarkdown';
 
 /**
- * Creates inline code
- * @param code input
- * @signature
- *    md.inlineCode(code)
+ * Create inline code
  * @example
- *    md.inlineCode('foo_bar') // => '`foo\\_bar`'
+ * md.inlineCode('inline fixed-width code') // => Markdown with value '`inline fixed\\-width code`'
  */
-export const inlineCode = (code: unknown) => {
+export const inlineCode = (code: unknown): Markdown => {
   if (!code) {
-    return toMarkdown();
+    return _toMarkdown();
   }
 
-  return toMarkdown(`\`${toMarkdown(code)}\``, true);
+  return _toMarkdown(`\`${_toMarkdown(code)}\``, true);
 };

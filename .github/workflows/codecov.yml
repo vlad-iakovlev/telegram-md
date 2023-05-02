@@ -6,6 +6,8 @@ on:
       - main
   pull_request:
 
+concurrency: codecov-${{ github.ref }}
+
 jobs:
   codecov:
     runs-on: ubuntu-latest

@@ -1,4 +1,4 @@
-name: Update packages
+name: Update Packages
 
 on:
   schedule:
@@ -20,7 +20,9 @@ jobs:
       - name: Commit and create PR
         uses: peter-evans/create-pull-request@v5
         with:
-          title: 'chore: npm update'
           branch: 'update/update-npm-packages'
           commit-message: 'chore: npm update'
+          title: 'chore: npm update'
+          body: |
+            Update NPM Packages
           reviewers: vlad-yakovlev

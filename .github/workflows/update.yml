@@ -18,7 +18,7 @@ jobs:
       - name: Update packages
         run: npm up -S
       - name: Commit and create PR
-        uses: peter-evans/create-pull-request@v3
+        uses: peter-evans/create-pull-request@v5
         with:
           title: 'chore: npm update'
           branch: 'update/update-npm-packages'

@@ -1,0 +1,30 @@
+name: Update Packages
+
+on:
+  schedule:
+    - cron: '0 0 * * 1'
+  workflow_dispatch:
+
+jobs:
+  update-npm-packages:
+    if: startsWith(github.repository, 'vlad-yakovlev/')
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+      - name: Setup Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: 18
+      - name: Update packages
+        run: npm up -S
+      - name: Commit and create PR
+        uses: peter-evans/create-pull-request@v5
+        with:
+          token: ${{secrets.GH_TOKEN}}
+          branch: update/update-npm-packages
+          commit-message: 'chore: npm update'
+          title: 'chore: npm update'
+          body: |
+            Update NPM Packages
+          assignees: vlad-yakovlev

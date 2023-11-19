@@ -1,7 +1,8 @@
-import { _toMarkdown } from './_toMarkdown';
-
-import { md } from './index';
+import { _toMarkdown } from './_toMarkdown.js'
+import { md } from './index.js'
 
 test('should build from template', () => {
-  expect(md`Hello, @${_toMarkdown('jonny_john')}! foo_bar!!`.value).toBe('Hello, @jonny\\_john\\! foo\\_bar\\!\\!');
-});
+  expect(md`Hello, @${_toMarkdown('jonny_john')}! foo_bar!!`.value).toBe(
+    'Hello, @jonny\\_john\\! foo\\_bar\\!\\!',
+  )
+})

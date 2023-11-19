@@ -1,4 +1,4 @@
-import { _toMarkdown } from './_toMarkdown';
+import { _toMarkdown } from './_toMarkdown.js'
 
 /**
  * Build message text for telegram API
@@ -6,4 +6,4 @@ import { _toMarkdown } from './_toMarkdown';
  * md.build(md`Hello, ${md.bold('World')}!`) // => 'Hello, *World*\\!'
  * md.build('Hello, World!') // => 'Hello, World\\!'
  */
-export const build = (text: unknown): string => _toMarkdown(text).value;
+export const build = (text: unknown): string => _toMarkdown(text).value

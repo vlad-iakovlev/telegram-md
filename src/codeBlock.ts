@@ -1,5 +1,5 @@
-import { Markdown } from './markdown';
-import { _toMarkdown } from './_toMarkdown';
+import { _toMarkdown } from './_toMarkdown.js'
+import { Markdown } from './markdown.js'
 
 /**
  * Create code block
@@ -12,8 +12,11 @@ import { _toMarkdown } from './_toMarkdown';
  */
 export const codeBlock = (code: unknown, language = ''): Markdown => {
   if (!code) {
-    return _toMarkdown();
+    return _toMarkdown()
   }
 
-  return _toMarkdown(`\`\`\`${_toMarkdown(language)}\n${_toMarkdown(code)}\n\`\`\``, true);
-};
+  return _toMarkdown(
+    `\`\`\`${_toMarkdown(language)}\n${_toMarkdown(code)}\n\`\`\``,
+    true,
+  )
+}

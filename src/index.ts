@@ -1,43 +1,43 @@
-import { bold as boldFunc } from './bold';
-import { build as buildFunc } from './build';
-import { codeBlock as codeBlockFunc } from './codeBlock';
-import { inlineCode as inlineCodeFunc } from './inlineCode';
-import { italic as italicFunc } from './italic';
-import { join as joinFunc } from './join';
-import { link as linkFunc } from './link';
-import { Markdown } from './markdown';
-import { spoiler as spoilerFunc } from './spoiler';
-import { strikethrough as strikethroughFunc } from './strikethrough';
-import { underline as underlineFunc } from './underline';
-import { _toMarkdown } from './_toMarkdown';
+import { _toMarkdown } from './_toMarkdown.js'
+import { bold as boldFunc } from './bold.js'
+import { build as buildFunc } from './build.js'
+import { codeBlock as codeBlockFunc } from './codeBlock.js'
+import { inlineCode as inlineCodeFunc } from './inlineCode.js'
+import { italic as italicFunc } from './italic.js'
+import { join as joinFunc } from './join.js'
+import { link as linkFunc } from './link.js'
+import { Markdown } from './markdown.js'
+import { spoiler as spoilerFunc } from './spoiler.js'
+import { strikethrough as strikethroughFunc } from './strikethrough.js'
+import { underline as underlineFunc } from './underline.js'
 
-export { Markdown };
+export { Markdown }
 
 /**
  * Creates Markdown from template
  * @example
  * md`Hello, ${md.bold('World')}!` // => Markdown with value 'Hello, *World*\\!'
  */
-export function md(strings: TemplateStringsArray, ...values: unknown[]): Markdown {
-  let result = `${_toMarkdown(strings[0])}`;
+export function md(
+  strings: TemplateStringsArray,
+  ...values: unknown[]
+): Markdown {
+  let result = `${_toMarkdown(strings[0])}`
 
   for (let i = 1; i < strings.length; i += 1) {
-    result += `${_toMarkdown(values[i - 1])}${_toMarkdown(strings[i])}`;
+    result += `${_toMarkdown(values[i - 1])}${_toMarkdown(strings[i])}`
   }
 
-  return _toMarkdown(result, true);
+  return _toMarkdown(result, true)
 }
 
-/* istanbul ignore next */
-export namespace md {
-  export const bold = boldFunc;
-  export const build = buildFunc;
-  export const codeBlock = codeBlockFunc;
-  export const inlineCode = inlineCodeFunc;
-  export const italic = italicFunc;
-  export const link = linkFunc;
-  export const join = joinFunc;
-  export const spoiler = spoilerFunc;
-  export const strikethrough = strikethroughFunc;
-  export const underline = underlineFunc;
-}
+md.bold = boldFunc
+md.build = buildFunc
+md.codeBlock = codeBlockFunc
+md.inlineCode = inlineCodeFunc
+md.italic = italicFunc
+md.join = joinFunc
+md.link = linkFunc
+md.spoiler = spoilerFunc
+md.strikethrough = strikethroughFunc
+md.underline = underlineFunc

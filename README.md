@@ -4,7 +4,7 @@ Telegram MarkdownV2 formatter
 
 ![GitHub CI](https://img.shields.io/github/actions/workflow/status/vlad-yakovlev/telegram-md/ci.yml?branch=main&label=github-ci)
 [![Codecov](https://img.shields.io/codecov/c/github/vlad-yakovlev/telegram-md/main)](https://codecov.io/gh/vlad-yakovlev/telegram-md)
-[![NPM](https://img.shields.io/npm/v/telegram-md)](https://www.npmjs.org/package/telegram-md)
+[![NPM](https://img.shields.io/npm/v/@vlad-yakovlev/telegram-md)](https://www.npmjs.org/package/@vlad-yakovlev/telegram-md)
 
 `telegram-md` is a powerful TypesScript library designed to simplify the formatting of text messages in Telegram MarkdownV2 format. It provides a range of methods for applying markdown formatting, such as bold, italic, and links, making it easier to create richly formatted messages programmatically.
 
@@ -17,13 +17,13 @@ Telegram MarkdownV2 formatter
 ## How to install
 
 ```sh
-npm install telegram-md
+npm install @vlad-yakovlev/telegram-md
 ```
 
 ## Usage Examples
 
 ```ts
-import { md } from 'telegram-md'
+import { md } from '@vlad-yakovlev/telegram-md'
 
 // Simple message formatting
 const message = md`Hello, ${md.bold('World')}!`

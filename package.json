@@ -1,5 +1,5 @@
 {
-  "name": "telegram-md",
+  "name": "@vlad-yakovlev/telegram-md",
   "version": "0.0.0",
   "description": "Telegram MarkdownV2 parser",
   "main": "dist/index.js",

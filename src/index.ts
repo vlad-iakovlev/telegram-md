@@ -18,10 +18,10 @@ export { Markdown }
  * @example
  * md`Hello, ${md.bold('World')}!` // => Markdown with value 'Hello, *World*\\!'
  */
-export function md(
+export const md = (
   strings: TemplateStringsArray,
   ...values: unknown[]
-): Markdown {
+): Markdown => {
   let result = `${_toMarkdown(strings[0])}`
 
   for (let i = 1; i < strings.length; i += 1) {

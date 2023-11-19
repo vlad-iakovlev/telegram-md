@@ -6,31 +6,43 @@ Telegram MarkdownV2 formatter
 [![Codecov](https://img.shields.io/codecov/c/github/vlad-yakovlev/telegram-md/main)](https://codecov.io/gh/vlad-yakovlev/telegram-md)
 [![NPM](https://img.shields.io/npm/v/telegram-md)](https://www.npmjs.org/package/telegram-md)
 
+`telegram-md` is a powerful TypesScript library designed to simplify the formatting of text messages in Telegram MarkdownV2 format. It provides a range of methods for applying markdown formatting, such as bold, italic, and links, making it easier to create richly formatted messages programmatically.
+
+## Table of Contents
+
+1. [How to Install](#how-to-install)
+2. [Usage Examples](#usage-examples)
+3. [API Documentation](#api-documentation)
+
 ## How to install
 
 ```sh
 npm install telegram-md
 ```
 
-## How to use
+## Usage Examples
 
 ```ts
 import { md } from 'telegram-md'
 
+// Simple message formatting
 const message = md`Hello, ${md.bold('World')}!`
-
 api.sendMessage(chatId, md.build(message))
+
+// Using different formatting styles
+const complexMessage = md`
+  This is an ${md.italic('italic')} and ${md.bold('bold')} text with a ${md.link('link', 'http://example.com')}!
+`
+api.sendMessage(chatId, md.build(complexMessage))
 ```
 
-## Classes
+## API Documentation
+
+Every method escapes all unescaped input. Input is assumed to be escaped only when it's an instance of Markdown.
 
 ### Markdown
 
 Stores the result of executing md methods. Used to differentiate between normal strings and escaped strings.
-
-## Methods
-
-Every method escapes all unescaped input. Input is assumed to be escaped only when it's an instance of Markdown.
 
 ### md
 

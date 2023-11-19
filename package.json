@@ -25,9 +25,9 @@
   "homepage": "https://github.com/vlad-yakovlev/telegram-md#readme",
   "devDependencies": {
     "@types/jest": "^29.5.8",
-    "@types/node": "^20.9.0",
-    "@typescript-eslint/eslint-plugin": "^6.10.0",
-    "eslint": "^8.53.0",
+    "@types/node": "^20.9.2",
+    "@typescript-eslint/eslint-plugin": "^6.11.0",
+    "eslint": "^8.54.0",
     "eslint-config-airbnb-base": "^15.0.0",
     "eslint-config-airbnb-typescript": "^17.1.0",
     "eslint-plugin-import": "^2.29.0",

@@ -1,7 +1,9 @@
+/coverage
 /src
 tsconfig.json
 .eslintignore
 .github
 .husky
+.vscode
 *.test.js
 *.test.d.ts

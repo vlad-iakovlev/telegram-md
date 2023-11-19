@@ -31,7 +31,9 @@ api.sendMessage(chatId, md.build(message))
 
 // Using different formatting styles
 const complexMessage = md`
-  This is an ${md.italic('italic')} and ${md.bold('bold')} text with a ${md.link('link', 'http://example.com')}!
+  This is an ${md.italic('italic')}
+  and ${md.bold('bold')} text
+  with a ${md.link('link', 'http://example.com')}!
 `
 api.sendMessage(chatId, md.build(complexMessage))
 ```
@@ -107,14 +109,19 @@ md.inlineCode('inline fixed-width code') // => Markdown with value '`inline fixe
 ### md.codeBlock
 
 ````ts
-md.code('pre-formatted fixed-width code block') // => Markdown with value
+md.code(
+  'pre-formatted fixed-width code block',
+) // => Markdown with value
 ```
 pre\\-formatted fixed\\-width code block
 ```
 ````
 
 ````ts
-md.code('pre-formatted fixed-width code block written in the Python', 'python') // => Markdown with value
+md.code(
+  'pre-formatted fixed-width code block written in the Python',
+  'python',
+) // => Markdown with value
 ```python
 pre\\-formatted fixed\\-width code block written in the Python
 ```

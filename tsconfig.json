@@ -1,11 +1,12 @@
 {
   "compilerOptions": {
     "declaration": true,
+    "forceConsistentCasingInFileNames": true,
     "esModuleInterop": true,
+    "isolatedModules": true,
     "module": "nodenext",
     "moduleResolution": "nodenext",
     "outDir": "dist",
-    "skipLibCheck": true,
     "strict": true,
     "target": "esnext",
     "types": ["node", "jest"]

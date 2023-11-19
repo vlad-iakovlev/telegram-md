@@ -1,5 +1,5 @@
-import { Markdown } from './markdown';
-import { _toMarkdown } from './_toMarkdown';
+import { _toMarkdown } from './_toMarkdown.js'
+import { Markdown } from './markdown.js'
 
 /**
  * Creates link
@@ -12,16 +12,16 @@ import { _toMarkdown } from './_toMarkdown';
  */
 export const link = (name: unknown, url: unknown): Markdown => {
   if (!name && !url) {
-    return _toMarkdown();
+    return _toMarkdown()
   }
 
   if (!name) {
-    return _toMarkdown(url);
+    return _toMarkdown(url)
   }
 
   if (!url) {
-    return _toMarkdown(name);
+    return _toMarkdown(name)
   }
 
-  return _toMarkdown(`[${_toMarkdown(name)}](${_toMarkdown(url)})`, true);
-};
+  return _toMarkdown(`[${_toMarkdown(name)}](${_toMarkdown(url)})`, true)
+}

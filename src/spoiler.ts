@@ -1,5 +1,5 @@
-import { Markdown } from './markdown';
-import { _toMarkdown } from './_toMarkdown';
+import { _toMarkdown } from './_toMarkdown.js'
+import { Markdown } from './markdown.js'
 
 /**
  * Creates spoiler
@@ -8,8 +8,8 @@ import { _toMarkdown } from './_toMarkdown';
  */
 export const spoiler = (text: unknown): Markdown => {
   if (!text) {
-    return _toMarkdown();
+    return _toMarkdown()
   }
 
-  return _toMarkdown(`||${_toMarkdown(text)}||`, true);
-};
+  return _toMarkdown(`||${_toMarkdown(text)}||`, true)
+}

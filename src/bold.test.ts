@@ -1,9 +1,9 @@
-import { bold } from './bold';
+import { bold } from './bold.js'
 
 test('should return empty string', () => {
-  expect(bold('').value).toBe('');
-});
+  expect(bold('').value).toBe('')
+})
 
 test('should return formatted value', () => {
-  expect(bold('foo_bar').value).toBe('*foo\\_bar*');
-});
+  expect(bold('foo_bar').value).toBe('*foo\\_bar*')
+})

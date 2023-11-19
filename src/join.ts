@@ -1,5 +1,5 @@
-import { Markdown } from './markdown';
-import { _toMarkdown } from './_toMarkdown';
+import { _toMarkdown } from './_toMarkdown.js'
+import { Markdown } from './markdown.js'
 
 /**
  * Join items
@@ -9,7 +9,7 @@ import { _toMarkdown } from './_toMarkdown';
 export const join = (texts: unknown[], separator: unknown = ''): Markdown => {
   const value = texts
     .map((text) => _toMarkdown(text))
-    .join(String(_toMarkdown(separator)));
+    .join(String(_toMarkdown(separator)))
 
-  return _toMarkdown(value, true);
-};
+  return _toMarkdown(value, true)
+}

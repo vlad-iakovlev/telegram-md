@@ -1,13 +1,13 @@
-import { _escape } from './_escape';
+import { _escape } from './_escape.js'
 
 export class Markdown {
-  value: string;
+  value: string
 
   constructor(value: unknown = '', escaped = false) {
-    this.value = escaped ? String(value) : _escape(String(value));
+    this.value = escaped ? String(value) : _escape(String(value))
   }
 
   toString() {
-    return this.value;
+    return this.value
   }
 }

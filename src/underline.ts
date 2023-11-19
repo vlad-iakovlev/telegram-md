@@ -1,5 +1,5 @@
-import { Markdown } from './markdown';
-import { _toMarkdown } from './_toMarkdown';
+import { _toMarkdown } from './_toMarkdown.js'
+import { Markdown } from './markdown.js'
 
 /**
  * Underline text
@@ -8,8 +8,8 @@ import { _toMarkdown } from './_toMarkdown';
  */
 export const underline = (text: unknown): Markdown => {
   if (!text) {
-    return _toMarkdown();
+    return _toMarkdown()
   }
 
-  return _toMarkdown(`__${_toMarkdown(text)}__`, true);
-};
+  return _toMarkdown(`__${_toMarkdown(text)}__`, true)
+}

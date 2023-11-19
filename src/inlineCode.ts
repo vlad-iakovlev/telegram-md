@@ -1,5 +1,5 @@
-import { Markdown } from './markdown';
-import { _toMarkdown } from './_toMarkdown';
+import { _toMarkdown } from './_toMarkdown.js'
+import { Markdown } from './markdown.js'
 
 /**
  * Create inline code
@@ -8,8 +8,8 @@ import { _toMarkdown } from './_toMarkdown';
  */
 export const inlineCode = (code: unknown): Markdown => {
   if (!code) {
-    return _toMarkdown();
+    return _toMarkdown()
   }
 
-  return _toMarkdown(`\`${_toMarkdown(code)}\``, true);
-};
+  return _toMarkdown(`\`${_toMarkdown(code)}\``, true)
+}

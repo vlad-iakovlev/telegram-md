@@ -6,6 +6,6 @@ updates:
     directory: '/'
     schedule:
       interval: 'weekly'
-      day: 'saturday'
+      day: 'sunday'
     reviewers:
       - 'vlad-yakovlev'

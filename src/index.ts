@@ -1,16 +1,17 @@
 import { _toMarkdown } from './_toMarkdown.js'
-import { bold as boldFunc } from './bold.js'
-import { build as buildFunc } from './build.js'
-import { codeBlock as codeBlockFunc } from './codeBlock.js'
-import { inlineCode as inlineCodeFunc } from './inlineCode.js'
-import { italic as italicFunc } from './italic.js'
-import { join as joinFunc } from './join.js'
-import { link as linkFunc } from './link.js'
+import { bold } from './bold.js'
+import { build } from './build.js'
+import { codeBlock } from './codeBlock.js'
+import { inlineCode } from './inlineCode.js'
+import { italic } from './italic.js'
+import { join } from './join.js'
+import { link } from './link.js'
 import { Markdown } from './markdown.js'
-import { spoiler as spoilerFunc } from './spoiler.js'
-import { strikethrough as strikethroughFunc } from './strikethrough.js'
-import { underline as underlineFunc } from './underline.js'
+import { spoiler } from './spoiler.js'
+import { strikethrough } from './strikethrough.js'
+import { underline } from './underline.js'
 
+// istanbul ignore next
 export { Markdown }
 
 /**
@@ -31,13 +32,13 @@ export const md = (
   return _toMarkdown(result, true)
 }
 
-md.bold = boldFunc
-md.build = buildFunc
-md.codeBlock = codeBlockFunc
-md.inlineCode = inlineCodeFunc
-md.italic = italicFunc
-md.join = joinFunc
-md.link = linkFunc
-md.spoiler = spoilerFunc
-md.strikethrough = strikethroughFunc
-md.underline = underlineFunc
+md.bold = bold
+md.build = build
+md.codeBlock = codeBlock
+md.inlineCode = inlineCode
+md.italic = italic
+md.join = join
+md.link = link
+md.spoiler = spoiler
+md.strikethrough = strikethrough
+md.underline = underline

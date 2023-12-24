@@ -105,7 +105,8 @@
     ],
     "collectCoverageFrom": [
       "src/**/*.ts"
-    ]
+    ],
+    "coverageProvider": "v8"
   },
   "lint-staged": {
     "**/*.(js|ts)": [

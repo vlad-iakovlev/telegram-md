@@ -28,17 +28,17 @@
   "bugs": "https://github.com/vlad-yakovlev/telegram-md/issues",
   "homepage": "https://github.com/vlad-yakovlev/telegram-md#readme",
   "devDependencies": {
-    "@swc/jest": "^0.2.29",
+    "@swc/jest": "^0.2.31",
     "@trivago/prettier-plugin-sort-imports": "^4.3.0",
     "@types/jest": "^29.5.11",
-    "@types/node": "^20.11.0",
-    "@typescript-eslint/eslint-plugin": "^6.18.1",
+    "@types/node": "^20.11.5",
+    "@typescript-eslint/eslint-plugin": "^6.19.0",
     "eslint": "^8.56.0",
     "eslint-config-prettier": "^9.1.0",
     "husky": "^8.0.3",
     "jest": "^29.7.0",
     "lint-staged": "^15.2.0",
-    "prettier": "^3.2.1",
+    "prettier": "^3.2.4",
     "typescript": "^5.3.3"
   },
   "eslintConfig": {

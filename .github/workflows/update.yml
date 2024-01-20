@@ -18,6 +18,8 @@ jobs:
           node-version: 18
       - name: Update packages
         run: npm up -S
+      - name: Run prettier
+        run: npm run prettier
       - name: Commit and create PR
         uses: peter-evans/create-pull-request@v5
         with:

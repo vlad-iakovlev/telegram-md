@@ -42,13 +42,11 @@
     "typescript": "^5.3.3"
   },
   "eslintConfig": {
-    "plugins": [
-      "@typescript-eslint"
-    ],
     "parserOptions": {
       "project": "./tsconfig.json"
     },
     "extends": [
+      "eslint:recommended",
       "plugin:@typescript-eslint/recommended",
       "plugin:@typescript-eslint/recommended-requiring-type-checking",
       "plugin:@typescript-eslint/strict",

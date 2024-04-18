@@ -1,4 +1,5 @@
 import { _toMarkdown } from './_toMarkdown.js'
+import { blockquote } from './blockquote.js'
 import { bold } from './bold.js'
 import { build } from './build.js'
 import { codeBlock } from './codeBlock.js'
@@ -42,3 +43,4 @@ md.link = link
 md.spoiler = spoiler
 md.strikethrough = strikethrough
 md.underline = underline
+md.blockquote = blockquote

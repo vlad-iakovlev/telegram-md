@@ -33,7 +33,7 @@ jobs:
 
   publish:
     needs: checks
-    if: startsWith(github.repository, 'vlad-yakovlev/') && github.ref == 'refs/heads/main'
+    if: startsWith(github.repository, 'vlad-iakovlev/') && github.ref == 'refs/heads/main'
     runs-on: ubuntu-latest
     steps:
       - name: Checkout

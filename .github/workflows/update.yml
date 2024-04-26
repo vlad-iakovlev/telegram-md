@@ -7,7 +7,7 @@ on:
 
 jobs:
   update-npm-packages:
-    if: startsWith(github.repository, 'vlad-yakovlev/')
+    if: startsWith(github.repository, 'vlad-iakovlev/')
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
@@ -29,4 +29,4 @@ jobs:
           title: 'chore: npm update'
           body: |
             Update NPM Packages
-          assignees: vlad-yakovlev
+          assignees: vlad-iakovlev

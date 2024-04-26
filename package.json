@@ -16,7 +16,7 @@
     "test": "jest --coverage",
     "test:ci": "jest"
   },
-  "repository": "https://github.com/vlad-yakovlev/telegram-md.git",
+  "repository": "https://github.com/vlad-iakovlev/telegram-md.git",
   "keywords": [
     "telegram",
     "markdown",
@@ -25,8 +25,8 @@
   ],
   "author": "Vladislav Yakovlev",
   "license": "MIT",
-  "bugs": "https://github.com/vlad-yakovlev/telegram-md/issues",
-  "homepage": "https://github.com/vlad-yakovlev/telegram-md#readme",
+  "bugs": "https://github.com/vlad-iakovlev/telegram-md/issues",
+  "homepage": "https://github.com/vlad-iakovlev/telegram-md#readme",
   "devDependencies": {
     "@swc/jest": "^0.2.36",
     "@trivago/prettier-plugin-sort-imports": "^4.3.0",

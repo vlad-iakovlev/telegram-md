@@ -7,5 +7,9 @@ updates:
     schedule:
       interval: weekly
       day: sunday
+    ignore:
+      - dependency-name: '@types/node'
+        update-types:
+          - 'version-update:semver-major'
     reviewers:
       - vlad-iakovlev

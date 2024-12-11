@@ -28,9 +28,9 @@
   "homepage": "https://github.com/vlad-iakovlev/telegram-md#readme",
   "devDependencies": {
     "@swc/jest": "^0.2.37",
-    "@trivago/prettier-plugin-sort-imports": "^4.3.0",
+    "@trivago/prettier-plugin-sort-imports": "^5.2.0",
     "@types/jest": "^29.5.14",
-    "@types/node": "^18.19.67",
+    "@types/node": "^18.19.68",
     "@typescript-eslint/eslint-plugin": "^8.18.0",
     "eslint": "^8.57.1",
     "eslint-config-prettier": "^9.1.0",

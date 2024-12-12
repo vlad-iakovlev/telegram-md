@@ -10,6 +10,7 @@ import { Markdown } from './markdown.js'
 import { spoiler } from './spoiler.js'
 import { strikethrough } from './strikethrough.js'
 import { underline } from './underline.js'
+import { blockquote } from './blockquote.js'
 
 // istanbul ignore next
 export { Markdown }
@@ -42,3 +43,4 @@ md.link = link
 md.spoiler = spoiler
 md.strikethrough = strikethrough
 md.underline = underline
+md.blockquote = blockquote

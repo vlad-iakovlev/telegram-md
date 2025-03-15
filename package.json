@@ -31,7 +31,7 @@
     "@trivago/prettier-plugin-sort-imports": "^5.2.2",
     "@types/jest": "^29.5.14",
     "@types/node": "^18.19.80",
-    "@typescript-eslint/eslint-plugin": "^8.26.0",
+    "@typescript-eslint/eslint-plugin": "^8.26.1",
     "eslint": "^8.57.1",
     "eslint-config-prettier": "^10.1.1",
     "jest": "^29.7.0",

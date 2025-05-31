@@ -14,5 +14,3 @@ updates:
       - dependency-name: 'eslint'
         update-types:
           - 'version-update:semver-major'
-    reviewers:
-      - vlad-iakovlev

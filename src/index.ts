@@ -1,4 +1,5 @@
 import { _toMarkdown } from './_toMarkdown.js'
+import { blockquote } from './blockquote.js'
 import { bold } from './bold.js'
 import { build } from './build.js'
 import { codeBlock } from './codeBlock.js'
@@ -32,6 +33,7 @@ export const md = (
   return _toMarkdown(result, true)
 }
 
+md.blockquote = blockquote
 md.bold = bold
 md.build = build
 md.codeBlock = codeBlock

@@ -106,6 +106,12 @@ md.link('inline mention of a user', 'tg://user?id=123456789') // => Markdown wit
 md.inlineCode('inline fixed-width code') // => Markdown with value '`inline fixed\\-width code`'
 ```
 
+### md.blockquote
+
+```ts
+md.blockquote('blockquote') // => Markdown with value '>blockquote'
+```
+
 ### md.codeBlock
 
 ````ts

@@ -1,4 +1,5 @@
 import { _toMarkdown } from './_toMarkdown.js'
+import { blockquote } from './blockquote.js'
 import { bold } from './bold.js'
 import { build } from './build.js'
 import { codeBlock } from './codeBlock.js'
@@ -10,7 +11,6 @@ import { Markdown } from './markdown.js'
 import { spoiler } from './spoiler.js'
 import { strikethrough } from './strikethrough.js'
 import { underline } from './underline.js'
-import { blockquote } from './blockquote.js'
 
 // istanbul ignore next
 export { Markdown }
@@ -33,6 +33,7 @@ export const md = (
   return _toMarkdown(result, true)
 }
 
+md.blockquote = blockquote
 md.bold = bold
 md.build = build
 md.codeBlock = codeBlock
@@ -43,4 +44,3 @@ md.link = link
 md.spoiler = spoiler
 md.strikethrough = strikethrough
 md.underline = underline
-md.blockquote = blockquote

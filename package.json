@@ -30,7 +30,7 @@
     "@swc/jest": "^0.2.39",
     "@trivago/prettier-plugin-sort-imports": "^5.2.2",
     "@types/jest": "^30.0.0",
-    "@types/node": "^18.19.120",
+    "@types/node": "^18.19.121",
     "@typescript-eslint/eslint-plugin": "^8.38.0",
     "eslint": "^8.57.1",
     "eslint-config-prettier": "^10.1.8",

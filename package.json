@@ -30,78 +30,14 @@
     "@swc/jest": "^0.2.39",
     "@trivago/prettier-plugin-sort-imports": "^5.2.2",
     "@types/jest": "^30.0.0",
-    "@types/node": "^18.19.121",
-    "@typescript-eslint/eslint-plugin": "^8.38.0",
-    "eslint": "^8.57.1",
+    "@types/node": "^22.17.0",
+    "eslint": "^9.32.0",
     "eslint-config-prettier": "^10.1.8",
     "jest": "^30.0.5",
+    "jiti": "^2.5.1",
     "lefthook": "^1.12.2",
     "prettier": "^3.6.2",
-    "typescript": "^5.8.3"
-  },
-  "eslintConfig": {
-    "parserOptions": {
-      "project": "./tsconfig.json"
-    },
-    "extends": [
-      "eslint:recommended",
-      "plugin:@typescript-eslint/recommended",
-      "plugin:@typescript-eslint/recommended-requiring-type-checking",
-      "plugin:@typescript-eslint/strict",
-      "prettier"
-    ],
-    "rules": {
-      "@typescript-eslint/no-invalid-void-type": [
-        "error",
-        {
-          "allowInGenericTypeArguments": true,
-          "allowAsThisParameter": true
-        }
-      ],
-      "@typescript-eslint/restrict-template-expressions": "off"
-    },
-    "overrides": [
-      {
-        "files": [
-          "*.test.ts",
-          "testUtils/**/*"
-        ],
-        "rules": {
-          "@typescript-eslint/no-explicit-any": "off",
-          "@typescript-eslint/no-unsafe-argument": "off",
-          "@typescript-eslint/no-unsafe-assignment": "off",
-          "@typescript-eslint/no-unsafe-call": "off",
-          "@typescript-eslint/no-unsafe-member-access": "off"
-        }
-      }
-    ]
-  },
-  "prettier": {
-    "plugins": [
-      "@trivago/prettier-plugin-sort-imports"
-    ],
-    "semi": false,
-    "singleQuote": true,
-    "importOrder": [
-      "^\\.\\./",
-      "^\\./"
-    ],
-    "importOrderSortSpecifiers": true
-  },
-  "jest": {
-    "moduleNameMapper": {
-      "^(\\.{1,2}/.*)\\.js$": "$1"
-    },
-    "transform": {
-      "^.+\\.(t|j)sx?$": "@swc/jest"
-    },
-    "testPathIgnorePatterns": [
-      "/node_modules/",
-      "/dist/"
-    ],
-    "collectCoverageFrom": [
-      "src/**/*.ts"
-    ],
-    "coverageProvider": "v8"
+    "typescript": "^5.8.3",
+    "typescript-eslint": "^8.38.0"
   }
 }

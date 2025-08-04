@@ -1,8 +1,13 @@
 /coverage
 /src
-tsconfig.json
-.eslintignore
+
 .github
 .vscode
+
+eslint.config.ts
+jest.config.js
+prettier.config.js
+tsconfig.json
+
 *.test.js
 *.test.d.ts

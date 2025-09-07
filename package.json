@@ -9,7 +9,7 @@
     "build": "tsc",
     "compile": "tsc --noEmit",
     "lint": "eslint .",
-    "lint:ci": "DEBUG=eslint:cli-engine eslint .",
+    "lint:ci": "DEBUG=eslint:eslint eslint .",
     "prettier": "prettier --write '**/*.(ts|js|md|json)'",
     "prettier:ci": "prettier --check '**/*.(ts|js|md|json)'",
     "test": "jest --coverage",

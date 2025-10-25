@@ -5,7 +5,7 @@ import tseslint from 'typescript-eslint'
 
 export default defineConfig(
   {
-    ignores: ['coverage', 'dist', 'jest.config.js', 'prettier.config.js'],
+    ignores: ['coverage', 'dist', 'prettier.config.js'],
   },
   eslint.configs.recommended,
   tseslint.configs.strictTypeChecked,

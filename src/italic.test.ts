@@ -1,3 +1,4 @@
+import { expect, test } from 'vitest'
 import { italic } from './italic.js'
 
 test('should return empty string', () => {

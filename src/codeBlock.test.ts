@@ -1,3 +1,4 @@
+import { expect, test } from 'vitest'
 import { codeBlock } from './codeBlock.js'
 
 test('should return empty string', () => {

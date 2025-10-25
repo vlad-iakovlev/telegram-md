@@ -1,3 +1,4 @@
+import { expect, test } from 'vitest'
 import { bold } from './bold.js'
 import { italic } from './italic.js'
 import { join } from './join.js'

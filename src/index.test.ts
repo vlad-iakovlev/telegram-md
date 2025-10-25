@@ -1,3 +1,4 @@
+import { expect, test } from 'vitest'
 import { _toMarkdown } from './_toMarkdown.js'
 import { md } from './index.js'
 

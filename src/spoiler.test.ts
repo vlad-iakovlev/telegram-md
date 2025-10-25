@@ -1,3 +1,4 @@
+import { expect, test } from 'vitest'
 import { spoiler } from './spoiler.js'
 
 test('should return empty string', () => {

@@ -1,3 +1,4 @@
+import { expect, test } from 'vitest'
 import { link } from './link.js'
 
 test('should return empty string', () => {

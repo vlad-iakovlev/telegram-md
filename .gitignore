@@ -4,7 +4,7 @@
 # misc
 .DS_Store
 
-# jest
+# vitest
 /coverage
 
 # build

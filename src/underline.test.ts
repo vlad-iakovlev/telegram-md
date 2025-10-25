@@ -1,3 +1,4 @@
+import { expect, test } from 'vitest'
 import { underline } from './underline.js'
 
 test('should return empty string', () => {

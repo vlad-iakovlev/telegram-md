@@ -1,3 +1,4 @@
+import { expect, test } from 'vitest'
 import { bold } from './bold.js'
 
 test('should return empty string', () => {

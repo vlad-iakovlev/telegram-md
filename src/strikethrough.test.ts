@@ -1,3 +1,4 @@
+import { expect, test } from 'vitest'
 import { strikethrough } from './strikethrough.js'
 
 test('should return empty string', () => {

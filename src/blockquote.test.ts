@@ -1,3 +1,4 @@
+import { expect, test } from 'vitest'
 import { blockquote } from './blockquote.js'
 
 test('should return empty string', () => {

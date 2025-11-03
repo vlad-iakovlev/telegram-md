@@ -34,7 +34,7 @@
     "eslint": "^9.38.0",
     "eslint-config-prettier": "^10.1.8",
     "jiti": "^2.6.1",
-    "lefthook": "^1.13.6",
+    "lefthook": "^2.0.2",
     "prettier": "^3.6.2",
     "typescript": "^5.9.3",
     "typescript-eslint": "^8.46.2",

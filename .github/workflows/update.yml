@@ -27,6 +27,5 @@ jobs:
           branch: update/update-npm-packages
           commit-message: 'chore: npm update'
           title: 'chore: npm update'
-          body: |
-            Update NPM Packages
+          body: Update NPM Packages
           assignees: vlad-iakovlev

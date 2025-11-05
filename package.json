@@ -2,6 +2,17 @@
   "name": "@vlad-yakovlev/telegram-md",
   "version": "0.0.0",
   "description": "Telegram MarkdownV2 parser",
+  "keywords": [
+    "telegram",
+    "markdown",
+    "parser",
+    "md"
+  ],
+  "homepage": "https://github.com/vlad-iakovlev/telegram-md#readme",
+  "bugs": "https://github.com/vlad-iakovlev/telegram-md/issues",
+  "repository": "https://github.com/vlad-iakovlev/telegram-md.git",
+  "license": "MIT",
+  "author": "Vladislav Iakovlev",
   "type": "module",
   "exports": "./dist/index.js",
   "types": "./dist/index.d.ts",
@@ -16,32 +27,17 @@
     "test:ci": "vitest run",
     "test:codecov": "npx vitest run --coverage --coverage.include='src/**/*.ts'"
   },
-  "repository": "https://github.com/vlad-iakovlev/telegram-md.git",
-  "keywords": [
-    "telegram",
-    "markdown",
-    "parser",
-    "md"
-  ],
-  "author": "Vladislav Iakovlev",
-  "license": "MIT",
-  "bugs": "https://github.com/vlad-iakovlev/telegram-md/issues",
-  "homepage": "https://github.com/vlad-iakovlev/telegram-md#readme",
   "devDependencies": {
     "@trivago/prettier-plugin-sort-imports": "^5.2.2",
     "@types/node": "^22.19.0",
     "@vitest/coverage-v8": "^4.0.6",
-    "eslint": "9.38.0",
-    "eslint-config-prettier": "^10.1.8",
+    "@vlad-iakovlev/eslint-config": "^1.0.0",
+    "eslint": "^9.39.1",
     "jiti": "^2.6.1",
     "lefthook": "^2.0.2",
     "prettier": "^3.6.2",
+    "prettier-plugin-packagejson": "^2.5.19",
     "typescript": "^5.9.3",
-    "typescript-eslint": "^8.46.3",
     "vitest": "^4.0.3"
-  },
-  "overrides": {
-    "@eslint/config-helpers": "0.4.1",
-    "@eslint/plugin-kit": "0.4.0"
   }
 }

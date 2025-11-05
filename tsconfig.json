@@ -13,5 +13,5 @@
     "types": ["node"]
   },
   "exclude": ["node_modules"],
-  "include": ["src", "eslint.config.ts"]
+  "include": ["src"]
 }

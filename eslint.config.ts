@@ -1,36 +1,17 @@
-import eslint from '@eslint/js'
-import prettierConfig from 'eslint-config-prettier'
-import { defineConfig } from 'eslint/config'
-import tseslint from 'typescript-eslint'
+import eslintConfig from '@vlad-iakovlev/eslint-config'
+import { defineConfig, globalIgnores } from 'eslint/config'
 
 export default defineConfig(
-  {
-    ignores: ['coverage', 'dist', 'prettier.config.js'],
-  },
-  eslint.configs.recommended,
-  tseslint.configs.strictTypeChecked,
-  tseslint.configs.stylisticTypeChecked,
-  prettierConfig,
+  globalIgnores(['coverage', 'dist', 'prettier.config.js']),
+  eslintConfig.node,
   {
     languageOptions: {
       parserOptions: {
-        projectService: true,
+        projectService: {
+          allowDefaultProject: ['eslint.config.ts'],
+        },
         tsconfigRootDir: import.meta.dirname,
       },
-    },
-  },
-  {
-    rules: {
-      '@typescript-eslint/consistent-type-definitions': ['error', 'type'],
-      '@typescript-eslint/no-empty-function': 'off',
-      '@typescript-eslint/no-invalid-void-type': [
-        'error',
-        {
-          allowInGenericTypeArguments: true,
-          allowAsThisParameter: true,
-        },
-      ],
-      '@typescript-eslint/restrict-template-expressions': 'off',
     },
   },
   {

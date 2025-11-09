@@ -28,7 +28,7 @@
     "test:codecov": "npx vitest run --coverage --coverage.include='src/**/*.ts'"
   },
   "devDependencies": {
-    "@trivago/prettier-plugin-sort-imports": "^5.2.2",
+    "@trivago/prettier-plugin-sort-imports": "^6.0.0",
     "@types/node": "^22.19.0",
     "@vitest/coverage-v8": "^4.0.8",
     "@vlad-iakovlev/eslint-config": "^1.0.0",

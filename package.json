@@ -30,13 +30,13 @@
   "devDependencies": {
     "@trivago/prettier-plugin-sort-imports": "^6.0.2",
     "@types/node": "^22.19.7",
-    "@vitest/coverage-v8": "^4.0.17",
+    "@vitest/coverage-v8": "^4.0.18",
     "@vlad-iakovlev/eslint-config": "^1.0.0",
     "eslint": "^9.39.2",
     "jiti": "^2.6.1",
     "lefthook": "^2.0.15",
-    "prettier": "^3.8.0",
-    "prettier-plugin-packagejson": "^2.5.21",
+    "prettier": "^3.8.1",
+    "prettier-plugin-packagejson": "^2.5.22",
     "typescript": "^5.9.3",
     "vitest": "^4.0.3"
   }

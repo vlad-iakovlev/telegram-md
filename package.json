@@ -32,7 +32,7 @@
     "@types/node": "^22.19.15",
     "@vitest/coverage-v8": "^4.0.18",
     "@vlad-iakovlev/eslint-config": "^1.0.0",
-    "eslint": "^9.39.4",
+    "eslint": "^10.0.3",
     "jiti": "^2.6.1",
     "lefthook": "^2.1.2",
     "prettier": "^3.8.1",

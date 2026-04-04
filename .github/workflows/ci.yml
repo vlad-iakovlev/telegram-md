@@ -21,7 +21,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
-        uses: actions/checkout@v5
+        uses: actions/checkout@v6
       - name: Setup Node.js
         uses: actions/setup-node@v6
         with:
@@ -31,31 +31,29 @@ jobs:
       - name: Run ${{ matrix.check }}
         run: npm run ${{ matrix.check }}
 
-  # publish:
-  #   needs: checks
-  #   if: startsWith(github.repository, 'vlad-iakovlev/') && github.ref == 'refs/heads/main'
-  #   runs-on: ubuntu-latest
-  #   permissions:
-  #     contents: write
-  #     issues: write
-  #     pull-requests: write
-  #     id-token: write
-  #   steps:
-  #     - name: Checkout
-  #       uses: actions/checkout@v5
-  #       with:
-  #         fetch-depth: 0
-  #     - name: Setup Node.js
-  #       uses: actions/setup-node@v6
-  #       with:
-  #         node-version: 22
-  #     - name: Install dependencies
-  #       run: |
-  #         npm ci
-  #         npm audit signatures
-  #     - name: Build
-  #       run: npm run build
-  #     - name: Release
-  #       run: npx semantic-release
-  #       env:
-  #         GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}
+  publish:
+    needs: checks
+    if: startsWith(github.repository, 'vlad-iakovlev/') && github.ref == 'refs/heads/main'
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+      id-token: write
+      pull-requests: write
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v6
+      - name: Setup Node.js
+        uses: actions/setup-node@v6
+        with:
+          node-version: 22
+      - name: Install dependencies
+        run: npm ci
+      - name: Version packages or publish
+        uses: changesets/action@v1
+        with:
+          version: npm run changeset:version
+          publish: npm run changeset:publish -- --provenance
+          title: 'chore(packages): publish packages'
+          commit: 'chore(packages): publish packages'
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

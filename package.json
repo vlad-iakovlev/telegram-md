@@ -7,6 +7,8 @@
   ],
   "scripts": {
     "build": "npm run build --workspaces --if-present",
+    "changeset:publish": "npm run build && changeset publish",
+    "changeset:version": "changeset version && npm install",
     "compile": "tsc --noEmit && npm run compile --workspaces --if-present",
     "lint": "eslint .",
     "lint:ci": "DEBUG=eslint:eslint eslint .",
@@ -14,9 +16,11 @@
     "prettier:ci": "prettier --check '**/*.(ts|js|md|json)'",
     "test": "vitest run --coverage --coverage.include='src/**/*.ts'",
     "test:ci": "vitest run",
-    "test:codecov": "npx vitest run --coverage --coverage.include='src/**/*.ts'"
+    "test:codecov": "vitest run --coverage --coverage.include='src/**/*.ts'"
   },
   "devDependencies": {
+    "@changesets/changelog-github": "^0.6.0",
+    "@changesets/cli": "^2.30.0",
     "@trivago/prettier-plugin-sort-imports": "^6.0.2",
     "@types/node": "^22.19.15",
     "@vitest/coverage-v8": "^4.1.2",

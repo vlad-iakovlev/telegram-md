@@ -1,17 +1,15 @@
 {
   "compilerOptions": {
-    "allowJs": true,
     "declaration": true,
     "forceConsistentCasingInFileNames": true,
-    "esModuleInterop": true,
-    "isolatedModules": true,
     "module": "nodenext",
     "moduleResolution": "nodenext",
-    "outDir": "dist",
+    "noUncheckedIndexedAccess": true,
+    "skipLibCheck": true,
     "strict": true,
     "target": "esnext",
     "types": ["node"]
   },
   "exclude": ["node_modules"],
-  "include": ["src"]
+  "include": ["eslint.config.ts", "prettier.config.js"]
 }

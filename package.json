@@ -1,37 +1,32 @@
 {
-  "name": "@vlad-yakovlev/telegram-md",
+  "name": "telegram-md",
   "version": "0.0.0",
-  "description": "Telegram MarkdownV2 parser",
-  "keywords": [
-    "telegram",
-    "markdown",
-    "parser",
-    "md"
-  ],
-  "homepage": "https://github.com/vlad-iakovlev/telegram-md#readme",
-  "bugs": "https://github.com/vlad-iakovlev/telegram-md/issues",
-  "repository": "https://github.com/vlad-iakovlev/telegram-md.git",
-  "license": "MIT",
-  "author": "Vladislav Iakovlev",
+  "private": true,
   "type": "module",
-  "exports": "./dist/index.js",
-  "types": "./dist/index.d.ts",
+  "workspaces": [
+    "packages/*"
+  ],
   "scripts": {
-    "build": "tsc",
-    "compile": "tsc --noEmit",
+    "build": "npm run build --workspaces --if-present",
+    "changeset:publish": "npm run build && changeset publish",
+    "changeset:version": "changeset version && npm install",
+    "compile": "tsc --noEmit && npm run compile --workspaces --if-present",
     "lint": "eslint .",
     "lint:ci": "DEBUG=eslint:eslint eslint .",
     "prettier": "prettier --write '**/*.(ts|js|md|json)'",
     "prettier:ci": "prettier --check '**/*.(ts|js|md|json)'",
-    "test": "vitest run --coverage --coverage.include='src/**/*.ts'",
+    "test": "vitest run --coverage --coverage.include='packages/*/src/**/*.ts'",
     "test:ci": "vitest run",
-    "test:codecov": "npx vitest run --coverage --coverage.include='src/**/*.ts'"
+    "test:codecov": "vitest run --coverage --coverage.include='packages/*/src/**/*.ts'"
   },
   "devDependencies": {
+    "@changesets/changelog-github": "^0.6.0",
+    "@changesets/cli": "^2.30.0",
+    "@napi-rs/wasm-runtime": "^1.1.2",
     "@trivago/prettier-plugin-sort-imports": "^6.0.2",
-    "@types/node": "^22.19.15",
+    "@types/node": "^22.19.17",
     "@vitest/coverage-v8": "^4.1.2",
-    "@vlad-iakovlev/eslint-config": "^1.0.0",
+    "@vlad-iakovlev/eslint-config": "^1.2.0",
     "eslint": "^9.39.4",
     "jiti": "^2.6.1",
     "lefthook": "^2.1.4",

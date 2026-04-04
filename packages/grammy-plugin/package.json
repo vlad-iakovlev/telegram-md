@@ -1,0 +1,33 @@
+{
+  "name": "@telegram-md/grammy-plugin",
+  "version": "0.0.0",
+  "description": "replyWithMarkdown method for grammY",
+  "keywords": [
+    "grammy",
+    "telegram",
+    "markdown",
+    "md",
+    "reply",
+    "send",
+    "message",
+    "sendMessage"
+  ],
+  "homepage": "https://github.com/vlad-iakovlev/telegram-md#readme",
+  "bugs": "https://github.com/vlad-iakovlev/telegram-md/issues",
+  "repository": "https://github.com/vlad-iakovlev/telegram-md.git",
+  "license": "MIT",
+  "author": "Vladislav Iakovlev",
+  "type": "module",
+  "exports": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "scripts": {
+    "build": "tsc",
+    "compile": "tsc --noEmit"
+  },
+  "dependencies": {
+    "@telegram-md/core": "^0.0.0"
+  },
+  "devDependencies": {
+    "grammy": "^1.42.0"
+  }
+}

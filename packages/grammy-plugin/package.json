@@ -1,12 +1,16 @@
 {
-  "name": "@telegram-md/core",
+  "name": "@telegram-md/grammy-plugin",
   "version": "0.0.0",
-  "description": "Telegram MarkdownV2 parser",
+  "description": "replyWithMarkdown method for grammY",
   "keywords": [
+    "grammy",
     "telegram",
     "markdown",
-    "parser",
-    "md"
+    "md",
+    "reply",
+    "send",
+    "message",
+    "sendMessage"
   ],
   "homepage": "https://github.com/vlad-iakovlev/telegram-md#readme",
   "bugs": "https://github.com/vlad-iakovlev/telegram-md/issues",
@@ -19,5 +23,11 @@
   "scripts": {
     "build": "tsc",
     "compile": "tsc --noEmit"
+  },
+  "dependencies": {
+    "@telegram-md/core": "^0.0.0"
+  },
+  "devDependencies": {
+    "grammy": "^1.42.0"
   }
 }

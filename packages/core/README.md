@@ -2,6 +2,8 @@
 
 Telegram MarkdownV2 formatter
 
+[![NPM](https://img.shields.io/npm/v/@telegram-md/core)](https://www.npmjs.org/package/@telegram-md/core)
+
 `@telegram-md/core` is a powerful TypesScript library designed to simplify the formatting of text messages in Telegram MarkdownV2 format. It provides a range of methods for applying markdown formatting, such as bold, italic, and links, making it easier to create richly formatted messages programmatically.
 
 ## Table of Contents

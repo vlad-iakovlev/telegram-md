@@ -5,8 +5,10 @@
     "module": "nodenext",
     "moduleResolution": "nodenext",
     "noUncheckedIndexedAccess": true,
+    "skipLibCheck": true,
     "strict": true,
-    "target": "esnext"
+    "target": "esnext",
+    "types": ["node"]
   },
   "exclude": ["node_modules"],
   "include": ["eslint.config.ts", "prettier.config.js"]

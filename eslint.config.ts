@@ -2,20 +2,18 @@ import eslintConfig from '@vlad-iakovlev/eslint-config'
 import { defineConfig, globalIgnores } from 'eslint/config'
 
 export default defineConfig(
-  globalIgnores(['coverage', 'dist', 'prettier.config.js']),
+  globalIgnores(['coverage', 'packages/*/dist', 'prettier.config.js']),
   eslintConfig.node,
   {
     languageOptions: {
       parserOptions: {
-        projectService: {
-          allowDefaultProject: ['eslint.config.ts'],
-        },
+        projectService: true,
         tsconfigRootDir: import.meta.dirname,
       },
     },
   },
   {
-    files: ['**/*.test.ts', 'testUtils/**/*'],
+    files: ['**/*.test.ts'],
     rules: {
       '@typescript-eslint/no-explicit-any': 'off',
       '@typescript-eslint/no-unsafe-argument': 'off',

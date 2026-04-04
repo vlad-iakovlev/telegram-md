@@ -8,4 +8,4 @@
 /coverage
 
 # build
-/dist
+/packages/*/dist

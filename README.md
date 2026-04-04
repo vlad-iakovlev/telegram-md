@@ -9,5 +9,5 @@ Telegram MarkdownV2 formatter
 
 ## Packages
 
-[@telegram-md/core](packages/core/README.md)
-[@telegram-md/grammy-plugin](packages/grammy-plugin/README.md)
+- [@telegram-md/core](packages/core/README.md)
+- [@telegram-md/grammy-plugin](packages/grammy-plugin/README.md)

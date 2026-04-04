@@ -15,9 +15,9 @@
     "lint:ci": "DEBUG=eslint:eslint eslint .",
     "prettier": "prettier --write '**/*.(ts|js|md|json)'",
     "prettier:ci": "prettier --check '**/*.(ts|js|md|json)'",
-    "test": "vitest run --coverage --coverage.include='src/**/*.ts'",
+    "test": "vitest run --coverage --coverage.include='packages/*/src/**/*.ts'",
     "test:ci": "vitest run",
-    "test:codecov": "vitest run --coverage --coverage.include='src/**/*.ts'"
+    "test:codecov": "vitest run --coverage --coverage.include='packages/*/src/**/*.ts'"
   },
   "devDependencies": {
     "@changesets/changelog-github": "^0.6.0",

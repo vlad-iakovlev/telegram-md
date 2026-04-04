@@ -1,5 +1,6 @@
 {
   "name": "telegram-md",
+  "version": "0.0.0",
   "private": true,
   "type": "module",
   "workspaces": [
@@ -22,9 +23,9 @@
     "@changesets/changelog-github": "^0.6.0",
     "@changesets/cli": "^2.30.0",
     "@trivago/prettier-plugin-sort-imports": "^6.0.2",
-    "@types/node": "^22.19.15",
+    "@types/node": "^22.19.17",
     "@vitest/coverage-v8": "^4.1.2",
-    "@vlad-iakovlev/eslint-config": "^1.0.0",
+    "@vlad-iakovlev/eslint-config": "^1.2.0",
     "eslint": "^9.39.4",
     "jiti": "^2.6.1",
     "lefthook": "^2.1.4",

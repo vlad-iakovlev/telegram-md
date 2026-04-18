@@ -29,6 +29,6 @@
   },
   "devDependencies": {
     "grammy": "^1.42.0",
-    "typescript": "^6.0.2"
+    "typescript": "^6.0.3"
   }
 }

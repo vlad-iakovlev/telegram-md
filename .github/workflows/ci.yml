@@ -25,7 +25,7 @@ jobs:
       - name: Setup Node.js
         uses: actions/setup-node@v6
         with:
-          node-version: 22
+          node-version: 24
       - name: Install dependencies
         run: npm ci
       - name: Build packages
@@ -47,14 +47,14 @@ jobs:
       - name: Setup Node.js
         uses: actions/setup-node@v6
         with:
-          node-version: 22
+          node-version: 24
       - name: Install dependencies
         run: npm ci
       - name: Version packages or publish
         uses: changesets/action@v1
         with:
           version: npm run changeset:version
-          publish: npx -y npm@11 run changeset:publish
+          publish: npm run changeset:publish
           title: 'chore(packages): publish packages'
           commit: 'chore(packages): publish packages'
         env:

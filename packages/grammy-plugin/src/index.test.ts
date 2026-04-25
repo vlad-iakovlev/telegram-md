@@ -3,7 +3,7 @@ import { expect, test, vi } from 'vitest'
 import { MarkdownFlavour, markdownPlugin } from './index.js'
 
 test('should set ctx.replyWithMarkdown and call next', async () => {
-  const ctx = {} as any
+  const ctx = {} as Context & MarkdownFlavour
   const order: string[] = []
   const next = vi.fn().mockImplementation(async () => {
     order.push('next1')
@@ -22,9 +22,8 @@ test('should set ctx.replyWithMarkdown and call next', async () => {
 
 test('should run correctly when only text presented', async () => {
   const reply = vi.fn<Context['reply']>()
-  const ctx = {
-    reply: reply as Context['reply'],
-  } as Context & MarkdownFlavour
+  const ctx = {} as Context & MarkdownFlavour
+  ctx.reply = reply
   const next = vi.fn()
 
   await markdownPlugin()(ctx, next)
@@ -39,9 +38,8 @@ test('should run correctly when only text presented', async () => {
 
 test('should pass arguments to ctx.reply', async () => {
   const reply = vi.fn<Context['reply']>()
-  const ctx = {
-    reply: reply as Context['reply'],
-  } as Context & MarkdownFlavour
+  const ctx = {} as Context & MarkdownFlavour
+  ctx.reply = reply
   const next = vi.fn()
   const signal = {} as any
 

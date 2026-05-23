@@ -29,7 +29,7 @@
     "@vlad-iakovlev/eslint-config": "^1.2.0",
     "eslint": "^9.39.4",
     "jiti": "^2.7.0",
-    "lefthook": "^2.1.6",
+    "lefthook": "^2.1.8",
     "prettier": "^3.8.3",
     "prettier-plugin-packagejson": "^3.0.2",
     "typescript": "^6.0.3",

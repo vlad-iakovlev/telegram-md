@@ -2,7 +2,7 @@ name: Update Packages
 
 on:
   schedule:
-    - cron: '0 0 * * 0,6'
+    - cron: '0 0 * * 0'
   workflow_dispatch:
 
 jobs:
@@ -11,9 +11,9 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
-        uses: actions/checkout@v6
+        uses: actions/checkout@v7
       - name: Setup Node.js
-        uses: actions/setup-node@v6
+        uses: actions/setup-node@v7
         with:
           node-version: 24
       - name: Update packages
@@ -21,6 +21,7 @@ jobs:
       - name: Run prettier
         run: npm run prettier
       - name: Commit and create PR
+        id: create_pr
         uses: peter-evans/create-pull-request@v8
         with:
           token: ${{secrets.GH_TOKEN}}
@@ -29,3 +30,8 @@ jobs:
           title: 'chore: npm update'
           body: Update NPM Packages
           assignees: vlad-iakovlev
+      - name: Enable Pull Request Automerge
+        if: steps.create_pr.outputs.pull-request-number
+        run: gh pr merge --squash --auto ${{ steps.create_pr.outputs.pull-request-number }}
+        env:
+          GH_TOKEN: ${{ secrets.GH_TOKEN }}

@@ -6,6 +6,7 @@ node_modules
 
 # vitest
 /coverage
+/.vitest
 
 # build
 /packages/*/dist

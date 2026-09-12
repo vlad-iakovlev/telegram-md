@@ -2,7 +2,7 @@ import eslintConfig from '@vlad-iakovlev/eslint-config'
 import { defineConfig, globalIgnores } from 'eslint/config'
 
 export default defineConfig(
-  globalIgnores(['coverage', 'packages/*/dist', 'prettier.config.js']),
+  globalIgnores(['coverage', '.vitest', 'packages/*/dist', 'prettier.config.js']),
   eslintConfig.node,
   {
     languageOptions: {

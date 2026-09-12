@@ -25,13 +25,13 @@
     "@napi-rs/wasm-runtime": "^1.2.3",
     "@trivago/prettier-plugin-sort-imports": "^6.0.2",
     "@types/node": "^24.13.3",
-    "@vitest/coverage-v8": "^4.1.2",
+    "@vitest/coverage-v8": "^5.0.0",
     "@vlad-iakovlev/eslint-config": "^2.0.1",
     "eslint": "^10.10.0",
     "jiti": "^2.7.0",
     "prettier": "^3.9.6",
     "prettier-plugin-packagejson": "^3.0.2",
     "typescript": "^6.0.3",
-    "vitest": "^4.0.3"
+    "vitest": "^5.0.0"
   }
 }

@@ -27,7 +27,7 @@
     "@types/node": "^24.19.2",
     "@vitest/coverage-v8": "^5.0.0",
     "@vlad-iakovlev/eslint-config": "^2.0.1",
-    "eslint": "^10.12.0",
+    "eslint": "^10.13.0",
     "jiti": "^2.7.0",
     "prettier": "^3.9.10",
     "prettier-plugin-packagejson": "^3.0.2",

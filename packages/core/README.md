@@ -113,9 +113,7 @@ md.blockquote('blockquote') // => Markdown with value '>blockquote'
 ### md.codeBlock
 
 ````ts
-md.code(
-  'pre-formatted fixed-width code block',
-) // => Markdown with value
+md.code('pre-formatted fixed-width code block') // => Markdown with value
 ```
 pre\\-formatted fixed\\-width code block
 ```

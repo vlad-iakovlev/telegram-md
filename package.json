@@ -25,7 +25,7 @@
     "@napi-rs/wasm-runtime": "^1.2.7",
     "@trivago/prettier-plugin-sort-imports": "^6.0.2",
     "@types/node": "^24.19.2",
-    "@vitest/coverage-v8": "^5.0.0",
+    "@vitest/coverage-v8": "^5.1.1",
     "@vlad-iakovlev/eslint-config": "^2.0.1",
     "eslint": "^10.15.0",
     "jiti": "^2.7.0",
